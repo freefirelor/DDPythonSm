@@ -25,8 +25,9 @@ packet = int(input(colored("_Packet: ",'green')))
 thread = int(input(colored("_Threads: ", 'green')))
 if 'http://' in url or 'https://' in url:
     ip = socket.gethostbyname(url.split('/')[2])
-else
+else:
     ip = socket.gethostbyname(url)
+
 time.sleep(1)
 os.system('cls')
 print(colored("""
