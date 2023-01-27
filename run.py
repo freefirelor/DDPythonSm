@@ -23,7 +23,10 @@ url = str(input(colored("_URL: ",'green')))
 port = int(input(colored("_Port: ",'green')))
 packet = int(input(colored("_Packet: ",'green')))
 thread = int(input(colored("_Threads: ", 'green')))
-ip = socket.gethostbyname(url)
+if 'http://' in url or 'https://' in url:
+    ip = socket.gethostbyname(url.split('/')[2])
+else
+    ip = socket.gethostbyname(url)
 time.sleep(1)
 os.system('cls')
 print(colored("""
